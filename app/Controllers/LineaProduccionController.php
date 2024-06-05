@@ -9,7 +9,11 @@ class LineaProduccionController extends BaseController
     public function index()
     {
         $model = new LineaProduccionModel();
-        $data['lineas'] = $model->findAll();
+
+        $data = [
+            'lineas' => $model->paginate(10),
+            'pager' => $model->pager,
+        ];
 
         return view('linea_produccion/lista', $data);
     }

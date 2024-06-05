@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class LineaProduccionModel extends Model
 {
     protected $table = 'linea_de_produccion';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_lineaProduccion';
 
     protected $allowedFields = ['nombre', 'id_usuario'];
 

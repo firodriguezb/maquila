@@ -10,7 +10,7 @@
                 <input type="text" class="form-control" id="nombre" name="nombre">
             </div>
             <div class="form-group">
-                <label for="id_usuario">Encargado:</label>
+                <label for="id_usuario">ID Usuario:</label>
                 <input type="text" class="form-control" id="id_usuario" name="id_usuario">
             </div>
             <button type="submit" class="btn btn-primary">Agregar Línea</button>

@@ -25,8 +25,8 @@ class PedidoModel extends Model
 
     public function getPedidosConDetalles()
     {
-        return $this->select('pedidos.*, clientes.nombre as cliente_nombre, cortes.descripcion as corte_descripcion')
-                    ->join('clientes', 'clientes.id = pedidos.cliente_id')
+        return $this->select('pedidos.*, cliente.id_Usuario as cliente_nombre, cortes.descripcion as corte_descripcion')
+                    ->join('cliente', 'cliente.id_Usuario = pedidos.cliente_id')
                     ->join('cortes', 'cortes.id = pedidos.corte_id')
                     ->findAll();
     }

@@ -4,12 +4,12 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class BultoModel extends Model
+class OperacionModel extends Model
 {
-    protected $table = 'bultos';
-    protected $primaryKey = 'id';
+    protected $table = 'operacion';
+    protected $primaryKey = 'id_operacion';
 
-    protected $allowedFields = ['descripcion', 'estado', 'fecha_revision'];
+    protected $allowedFields = ['nombre', 'descripcion', 'id_ordenProduccion'];
 
     // Dates
     protected $useTimestamps = false;
@@ -23,11 +23,5 @@ class BultoModel extends Model
     protected $validationMessages   = [];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
-    
-    public function contarBultosPorEstado()
-    {
-        return $this->select('estado, COUNT(*) as total')
-                    ->groupBy('estado')
-                    ->findAll();
-    }
+
 }

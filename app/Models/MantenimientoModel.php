@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class MantenimientoModel extends Model
 {
     protected $table            = 'mantenimiento';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'id_mantenimiento';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

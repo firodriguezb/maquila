@@ -9,7 +9,7 @@
                 <tr>
                     <th>ID Línea</th>
                     <th>Nombre</th>
-                    <th>Encargado</th>
+                    <th>ID Usuario</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,6 +22,8 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <!-- Enlaces de paginación -->
+        <?= $pager->links('default', 'custom_pagination') ?>
     </div>
 
     <!-- Bootstrap JS -->

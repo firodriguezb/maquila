@@ -6,10 +6,10 @@ use CodeIgniter\Model;
 
 class CorteModel extends Model
 {
-    protected $table = 'cortes';
-    protected $primaryKey = 'id';
+    protected $table = 'corte';
+    protected $primaryKey = 'id_corte';
 
-    protected $allowedFields = ['descripcion'];
+    protected $allowedFields = ['id_orden', 'id_usuario'];
 
     // Dates
     protected $useTimestamps = false;

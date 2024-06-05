@@ -6,15 +6,15 @@ use CodeIgniter\Model;
 
 class ControlBultosModel extends Model
 {
-    protected $table = 'bultos';
-    protected $primaryKey = 'id';
+    protected $table = 'control_bultos';
+    protected $primaryKey = 'id_controlBultos';
 
     protected $useAutoIncrement = true;
 
     protected $returnType     = 'array';
     protected $useSoftDeletes = false;
 
-    protected $allowedFields = ['fecha', 'corte_id', 'cantidad_piezas', 'repartidor_id'];
+    protected $allowedFields = ['numeroBulto', 'talla', 'cantidad', 'fecha', 'hora', 'estatus', 'id_operacion', 'id_usuario'];
 
     // Dates
     protected $useTimestamps = false;

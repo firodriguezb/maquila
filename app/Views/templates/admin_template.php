@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?= base_url('assets/adminlte/plugins/fontawesome-free/css/all.min.css') ?>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
@@ -176,7 +177,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="<?= site_url('dashboard'); ?>" class="brand-link">
       <img src="<?= base_url('assets/adminlte/dist/img/AdminLTELogo.png') ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -209,7 +210,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+              with font-awesome or any other icon font library -->
           
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -217,26 +218,20 @@
               <p>
                 Bultos
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">3</span>
+                <span class="badge badge-info right">2</span>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?= site_url('bultos'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Bultos Registrados</p>
+                  <p>Registro de Bultos</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?= site_url('bultos/nuevo'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Agregar Nuevo Bulto</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= site_url('bultos/reporte'); ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Reporte de Bultos</p>
+                  <p>Nuevo Bulto</p>
                 </a>
               </li>
             </ul>
@@ -247,32 +242,20 @@
               <p>
                 Maquinas
                 <i class="right fas fa-angle-left"></i>
-                <span class="badge badge-info right">4</span>
+                <span class="badge badge-info right">2</span>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="<?= site_url('maquina'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Maquinas Registradas</p>
+                  <p>Registro de Máquinas</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?= site_url('maquina/nuevo'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Registrar Nueva Maquina</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= site_url('reporte-maquina'); ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Reportar Maquina</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= site_url('reporte-maquina/generarReporte'); ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Lista de Reportes</p>
+                  <p>Nueva Maquina</p>
                 </a>
               </li>
             </ul>
@@ -283,26 +266,20 @@
               <p>
                 Cortes
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">3</span>
+                <span class="badge badge-info right">2</span>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= site_url('pedidos'); ?>" class="nav-link">
+                <a href="<?= site_url('cortes'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Pedidos de Corte</p>
+                  <p>Registro de Cortes</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= site_url('corte/registrar-defectos'); ?>" class="nav-link">
+                <a href="<?= site_url('cortes/nuevo'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Registrar Defecto</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= site_url('corte/ver-registro'); ?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Registro de Defectos</p>
+                  <p>Nuevo Corte</p>
                 </a>
               </li>
             </ul>
@@ -320,13 +297,37 @@
               <li class="nav-item">
                 <a href="<?= site_url('repartidor'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Registro Repartidores</p>
+                  <p>Registro de Repartidores</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?= site_url('repartidor/nuevo'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Registrar Repartidor</p>
+                  <p>Nuevo Repartidor</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Operaciones
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">2</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= site_url('operacion'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Registro de Operaciones</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= site_url('operacion/nuevo'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Nueva Operación</p>
                 </a>
               </li>
             </ul>
@@ -342,15 +343,39 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= site_url('linea/nuevo'); ?>" class="nav-link">
+                <a href="<?= site_url('linea'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Registrar Línea</p>
+                  <p>Registro de Líneas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= site_url('linea'); ?>" class="nav-link">
+                <a href="<?= site_url('linea/nuevo'); ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Líneas Registradas</p>
+                  <p>Nueva Línea</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Mantenimiento
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right">2</span>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= site_url('mantenimiento'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Registro Mantenimientos</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= site_url('mantenimiento/nuevo'); ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Nuevo Mantenimiento</p>
                 </a>
               </li>
             </ul>

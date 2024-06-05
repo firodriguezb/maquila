@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class MaquinaModel extends Model
 {
     protected $table = 'maquina';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_maquina';
 
     protected $allowedFields = ['fechaAdquisicion', 'tipo', 'id_lineaProduccion'];
 
@@ -23,4 +23,5 @@ class MaquinaModel extends Model
     protected $validationMessages   = [];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
+
 }

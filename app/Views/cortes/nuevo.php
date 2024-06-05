@@ -6,8 +6,12 @@
         <h1>Agregar Nuevo Corte</h1>
         <form action="<?= site_url('cortes/store') ?>" method="post">
             <div class="form-group">
-                <label for="descripcion">Descripción:</label>
-                <input type="text" class="form-control" id="descripcion" name="descripcion">
+                <label for="id_orden">ID Orden:</label>
+                <input type="number" class="form-control" id="id_orden" name="id_orden">
+            </div>
+            <div class="form-group">
+                <label for="id_usuario">ID Usuario:</label>
+                <input type="number" class="form-control" id="id_usuario" name="id_usuario">
             </div>
             <button type="submit" class="btn btn-primary">Agregar Corte</button>
         </form>
